@@ -40,6 +40,7 @@ export default function registro() {
                 if (result.validar == true){
                     localStorage.setItem("loguedUser", result.log[0].Id_usuario)
                     console.log("Registrado!")
+                    router.replace("../contactos")
                 } else {
                     return alert("La Cagaste")
                 }
@@ -68,6 +69,9 @@ export default function registro() {
                 textb="Registrar"
                 text="Ya tengo cuenta"
                 mover={moverse}
+                onClick={registra}
+                onChange1={corrobao1}
+                onChange2={corrobao2}
             ></FormR>
         </>
     )

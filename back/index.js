@@ -103,6 +103,7 @@ app.post('/login',async function(req,res){
     }
 })
 
+
 // Arreglado (x ahora)
 app.post('/registro',async function(req,res){
     try {

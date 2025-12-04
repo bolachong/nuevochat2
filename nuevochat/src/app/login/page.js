@@ -12,6 +12,7 @@ export default function login(){
     const [usuarios, setUsuarios] = useState([])
     const [valorM, setValorM] = useState("")
     const [valorC, setValorC] = useState("")
+    const [mensaje, setMensaje] = useState("")
 
     function corrobao1(event){
         setValorM(event.target.value)
@@ -43,13 +44,17 @@ export default function login(){
                 if (result.validar == true){
                     console.log(result.log[0].Id_usuario)
                     localStorage.setItem("loguedUser", result.log[0].Id_usuario)
-                    console.log("soy gay")
+                    router.replace("../contactos")
                 } else {
                     return alert("La Cagaste")
                 }}
             )
+        } else {
+            console.log("soy gey")
         }
     }
+
+
 
     
     function loguea() {
