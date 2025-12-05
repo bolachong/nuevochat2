@@ -257,3 +257,18 @@ app.post('/ultimoMensaje',async function(req,res){
         res.send({validar:false})
     }
 })
+
+/*app.post('/crear',async function(req,res){
+    try {
+        console.log(req.body);
+        let vector = await realizarQuery(`SELECT * FROM Usuarios WHERE Mail = "${req.body.mail}"`)
+        if(vector.length == 0){
+            await realizarQuery(`INSERT INTO Usuarios_x_chats (Id_Usuario, Id_Chat) VALUES ("${req.body.mail}", "${req.body.estado}", ${req.body.limite_max}, "${req.body.id_owner}")`)
+        }
+        else{
+            res.send({validar:false});
+        }
+    } catch (error) {
+        res.send({validar:false})
+    }
+})*/

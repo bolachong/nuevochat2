@@ -90,7 +90,7 @@ export default function contacto() {
             }
             <Button
                 onClick={crear}
-                text="Nuevo chat"
+                text="Nuevo chat (no funca, no entrar xd)"
             ></Button>
         </>
     )

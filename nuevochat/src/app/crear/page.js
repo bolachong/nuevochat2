@@ -1,24 +1,27 @@
 "use client"
 
 import Button from "@/components/Button"
+import FormC from "@/components/FormC"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
 export default function crear() {
     const router = useRouter()
-    const [logued, setLogued] = useState(0)
+    /*const [logued, setLogued] = useState(0)
+    const [nombre, setNombre] = useState("")
+    const [mail, setMail] = useState("")
 
   useEffect(()=>{
     const loguedUser = localStorage.getItem("loguedUser")
     setLogued(parseInt(loguedUser))
     ids(loguedUser)
-  }, [])
+  }, [])*/
 
   function moverse() {
     router.replace("../contacto")
   }
 
-  function idsChat(datos){
+  /*function crearChat(datos){
     fetch("http://localhost:4000/crear",
     {
       method:"POST", 
@@ -41,16 +44,15 @@ export default function crear() {
     )
   }
 
-    function creoMesa() {
-    if(codigoMesa == undefined || modo == undefined || limite == undefined || mailUser == undefined){
+    function creoChat() {
+    if(mail == undefined || nombre == undefined){
         return alert("Error, faltan datos")
     }
-    let a = modo.toLowerCase()
     let datos = {
-        num_mesa: codigoMesa,
-        estado: a
+        mail_user: mail,
+        nombre_user: nombre
     }
-    crearMesa(datos)}
+    crearChat(datos)}*/
 
     return (
         <>
@@ -59,6 +61,9 @@ export default function crear() {
                 onClick={moverse}
                 text="Volver"
             ></Button>
+            <FormC
+              text="Crear contacto"
+            ></FormC>
         </>
     )
 }

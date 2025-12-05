@@ -3,8 +3,8 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div>
+      <main>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -13,7 +13,7 @@ export default function Home() {
           height={20}
           priority
         />
-        <div className={styles.intro}>
+        <div>
           <h1>To get started, edit the page.js file.</h1>
           <p>
             Looking for a starting point or more instructions? Head over to{" "}
@@ -35,15 +35,13 @@ export default function Home() {
             center.
           </p>
         </div>
-        <div className={styles.ctas}>
+        <div>
           <a
-            className={styles.primary}
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image
-              className={styles.logo}
               src="/vercel.svg"
               alt="Vercel logomark"
               width={16}
@@ -52,7 +50,6 @@ export default function Home() {
             Deploy Now
           </a>
           <a
-            className={styles.secondary}
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
